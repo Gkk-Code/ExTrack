@@ -59,7 +59,7 @@ Put the pretrained models in [./pretrained](pretrained), it should be like:
 ```
 Then, run the following command:
 ```
-python -m torch.distributed.launch --nproc_per_node 4 lib/train/run_training.py --script UniTrack --config UniTrack_b224 --save_dir .
+python tracking/train.py --script extrack --config extrack_b224 --save_dir ./output --mode multiple --nproc_per_node 5
 ```
 
 
@@ -73,21 +73,21 @@ Change the corresponding values of `lib/test/evaluation/local.py` to the actual 
 Some testing examples:
 - UAVDark135 or other off-line evaluated benchmarks (modify `--dataset` correspondingly)
 ```
-python tracking/test.py UniTrack UniTrack_b224 --dataset uavdark135 --threads 16 --num_gpus 4
+python tracking/test.py extrack extrack_b224 --dataset uavdark135 --threads 16 --num_gpus 4
 python tracking/analysis_results.py # need to modify tracker configs and names
 ```
 - DarkTrack2021
 ```
-python tracking/test.py UniTrack UniTrack_b224 --dataset darktrack2021 --threads 16 --num_gpus 4
+python tracking/test.py extrack extrack_b224 --dataset_name darktrack2021 --threads 0 --num_gpus 1
 python tracking/analysis_results.py # need to modify tracker configs and names
 ```
 - NAT2021
 ```
-python tracking/test.py UniTrack UniTrack_b224 --dataset nat2021 --threads 16 --num_gpus 4
+python tracking/test.py extrack extrack_b224 --dataset nat2021 --threads 16 --num_gpus 4
 python tracking/analysis_results.py # need to modify tracker configs and names
 ```
 - NAT2024-1
 ```
-python tracking/test.py UniTrack UniTrack_b224 --dataset nat2021 --threads 16 --num_gpus 4
+python tracking/test.py extrack extrack_b224 --dataset nat2021 --threads 16 --num_gpus 4
 python tracking/analysis_results.py # need to modify tracker configs and names
 ```
