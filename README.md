@@ -3,7 +3,7 @@
 ### Data Preparation
 **Put the tracking datasets in ./data. It should look like this:**
    ```
-   ${UniTrack_ROOT}
+   ${extrack_ROOT}
     -- data
         -- lasot
             |-- airplane
@@ -66,7 +66,7 @@ python tracking/train.py --script extrack --config extrack_b224 --save_dir ./out
 
 ### Testing
 Download the model weights from  [BaiduNetDisk](https://pan.baidu.com/s/1l7objsrHt-NCMNs-b5AksQ) code: p647
-Put the downloaded weights on `<PATH_of_DCPT>/output/checkpoints/train/UniTrack/UniTrack_b224`
+Put the downloaded weights on `<PATH_of_extrack>/output/checkpoints/train/extrack/extrack_b224`
 
 Change the corresponding values of `lib/test/evaluation/local.py` to the actual benchmark saving paths
 
