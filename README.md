@@ -52,7 +52,7 @@ Dowmload the pretrained [[Baidu Drive]](https://pan.baidu.com/s/1pMc3SzshxhLTGTF
 Put the pretrained models in [./pretrained](pretrained), it should be like:
 
    ```
-   ${Unirack_ROOT}
+   ${ExTrack_ROOT}
     -- pretrained
         -- itpn
             |-- fast_itpn_base_clipl_e1600.pt
