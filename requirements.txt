@@ -1,0 +1,15 @@
+# Install a matching CUDA build of torch and torchvision separately.
+timm==0.6.13
+numpy<2
+scipy
+pandas
+opencv-python
+Pillow
+easydict
+PyYAML
+tensorboard
+lmdb
+jpeg4py
+pycocotools
+matplotlib
+tqdm
